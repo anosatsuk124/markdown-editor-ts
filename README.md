@@ -1,6 +1,6 @@
 # Markdown Editor
 
-A simple markdown editor. Its mardown parser is built from scratch. 
+A simple markdown editor. Its markdown parser is built from scratch. 
 
 ## Usage
 
