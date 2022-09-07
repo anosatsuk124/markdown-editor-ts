@@ -11,15 +11,15 @@
         "lint": "eslint ."
     },
     "dependencies": {
+        "dompurify": "^2.4.0",
         "fp-ts": "^2.12.3",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "sanitize-html": "^2.7.1"
+        "react-dom": "^18.2.0"
     },
     "devDependencies": {
+        "@types/dompurify": "^2.3.4",
         "@types/react": "^18.0.17",
         "@types/react-dom": "^18.0.6",
-        "@types/sanitize-html": "^2.6.2",
         "@typescript-eslint/eslint-plugin": "^5.36.2",
         "@typescript-eslint/parser": "^5.36.2",
         "@vitejs/plugin-react": "^2.1.0",
