@@ -1,0 +1,77 @@
+<Document> := (<Block> <CR><CR>)*
+
+
+<Block> := <Heading> | <StylingText> | <QuotingText> | <QuotingCode> | <Link> | <Image> | <Lists> | <Paragraph> | <Footnote> | <FootnoteReference>
+
+
+<Heading> := <Heading1> | <Heading2> | <Heading3> | <Heading4> | <Heading5> | <Heading6>
+
+<Heading1> := "#" " " <text>+
+
+<Heading2> := "#" <Heading1>
+
+<Heading3> := "#" <Heading2>
+
+<Heading4> := "#" <Heading3>
+
+<Heading5> := "#" <Heading4>
+
+<Heading6> := "#" <Heading5>
+
+
+<StylingText> := <Bold> | <Italic> | <Strikethrough> | <Bold and nested italic> | <All bold and italic> | <Subscript> | <Superscript>
+
+<Bold> := "**" <text>* "**" | "__" <text>* "__"
+
+<Italic> := "*" <text>* "*" | "_" <text>* "_"
+
+<Strikethrough> := "~~" <text>* "~~"
+
+<Bold and nested italic> := "**" ( <text>* <Italic>* <text>* )* "**"
+
+<All bold and italic> := "***" <text>* "***"
+
+<Subscript> := "<sub>" <text>* "</sub>"
+
+<Superscript> := "<sup>" <text>* "</sup>"
+
+
+<QuotingText> := ">" <text>*
+
+
+<QuotingCode> := <InlineQuotingCode> | <BlockQuotingCode>
+
+<InlineQuotingCode> := "`" <text>* "`"
+
+<BlockQuotingCode> := "```" <text block>* "```"
+
+
+<Link> := "[" <text>* "]" "(" <url> ")"
+
+
+<Image> := "!" <Link>
+
+
+<Lists> := (<UnorderdList> <CR>)+ | (<OrderdList> <CR>)+
+
+<UnorderdList> := "*" " " <text>* | "-" " " <text>*
+
+<OrderdList> := <number> "." " " <text>*
+
+
+<Paragraph> := <text block>+
+
+
+<Footnote> := "[" "^" <number> "]"
+<FootnoteReference> := <Footnote> ":" " " <text>*
+
+
+<url> := <text>+
+
+<text block> := <text>* <CR>
+
+<text> := unicode characters
+
+<CR> := "\lf"
+
+<number> := ascii number characters
