@@ -1,5 +1,20 @@
 # Markdown Editor
 
+## Usage
+
+## Philosophy
+
+The philosophy of this program is to keep minimal and extensible Implementations. We don't need any complex functions and implements. All of the necessary functions would be realized to insert or modify small codes.
+
+## Markdown Parser Implementation
+
+Its parser is built from scratch. So I needed some formal documentation and formal syntax or grammar expressions.
+
+But I can find nothing I want at all, then I defined a formal (E)BNF-syntax expression as reference [GitHub Official Documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+
+[(E)BNF-syntax expression I defined](./docs/markdown.ebnf)
+
+
 ```
 
     This is a simple markdown editor. Its markdown parser is built from scratch.
