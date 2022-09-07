@@ -1,5 +1,7 @@
 # Markdown Editor
 
+A simple markdown editor. Its mardown parser is built from scratch. 
+
 ## Usage
 
 ## Philosophy
@@ -10,7 +12,7 @@ The philosophy of this program is to keep minimal and extensible Implementations
 
 Its parser is built from scratch. So I needed some formal documentation and formal syntax or grammar expressions.
 
-But I can find nothing I want at all, then I defined a formal (E)BNF-syntax expression as reference [GitHub Official Documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+But I can find nothing I want at all, then I defined a GitHub-flavored Markdown subset of a formal (E)BNF-syntax expression as reference [GitHub Official Documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
 [(E)BNF-syntax expression I defined](./docs/markdown.ebnf)
 
