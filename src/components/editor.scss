@@ -1,0 +1,21 @@
+.editor {
+    display: flex;
+    justify-content: center;
+}
+
+.editting-area {
+    margin: 5%;
+    textarea {
+        resize: none;
+        width: 40vw;
+        height: 80vh;
+    }
+}
+
+.renderer {
+    margin: 5%;
+    div {
+        width: 40vw;
+        height: 80vh;
+    }
+}
