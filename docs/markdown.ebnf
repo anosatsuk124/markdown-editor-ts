@@ -6,7 +6,7 @@
 
 <Heading> := <Heading1> | <Heading2> | <Heading3> | <Heading4> | <Heading5> | <Heading6>
 
-<Heading1> := "#" " " <text>+
+<Heading1> := "#" " " <text>*
 
 <Heading2> := "#" <Heading1>
 
@@ -19,7 +19,7 @@
 <Heading6> := "#" <Heading5>
 
 
-<StylingText> := <Bold> | <Italic> | <Strikethrough> | <Bold and nested italic> | <All bold and italic> | <Subscript> | <Superscript>
+<StylingText> := <Bold> | <Italic> | <Strikethrough> | <All bold and italic> 
 
 <Bold> := "**" <text>* "**" | "__" <text>* "__"
 
@@ -27,13 +27,7 @@
 
 <Strikethrough> := "~~" <text>* "~~"
 
-<Bold and nested italic> := "**" ( <text>* <Italic>* <text>* )* "**"
-
 <All bold and italic> := "***" <text>* "***"
-
-<Subscript> := "<sub>" <text>* "</sub>"
-
-<Superscript> := "<sup>" <text>* "</sup>"
 
 
 <QuotingText> := ">" <text>*
@@ -52,14 +46,14 @@
 <Image> := "!" <Link>
 
 
-<Lists> := (<UnorderdList> <CR>)+ | (<OrderdList> <CR>)+
+<List> := (<UnorderdList> <CR>) | (<OrderdList> <CR>)
 
 <UnorderdList> := "*" " " <text>* | "-" " " <text>*
 
 <OrderdList> := <number> "." " " <text>*
 
 
-<Paragraph> := <text block>+
+<Paragraph> := (<StylingText> | <text block>)+
 
 
 <Footnote> := "[" "^" <number> "]"
